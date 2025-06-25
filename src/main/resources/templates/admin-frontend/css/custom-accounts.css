@@ -1,0 +1,52 @@
+/* ============================
+   CUSTOM ACCOUNTS STYLES
+   ============================
+*/
+
+/* 1. Tùy chỉnh card header (background, v.v.) */
+/* lighten(#4e73df, 40%) ~ #95abec, bạn có thể đổi màu nếu muốn */
+
+
+
+
+/* 3. Thêm khoảng cách cho nút hành động */
+.btn {
+  margin-right: 5px;
+}
+
+/* 4. Tùy chỉnh nhẹ cho modal (nếu muốn đồng nhất) */
+.modal-content {
+  border-radius: 8px;
+}
+
+.modal-header {
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+}
+
+.modal-title {
+  color: #4e73df;
+  font-weight: 600;
+}
+
+.modal-footer {
+  border-top: 1px solid #e3e6f0;
+}
+
+.table.table-bordered th {
+
+  text-align: center;     /* Căn giữa nội dung */
+  color: #4e73df;         /* Màu chữ xanh #4e73df */
+  border: 1px solid #ddd; /* Giữ đường viền */
+  padding: 8px 12px;      /* Khoảng cách ô */
+}
+
+/* Hiệu ứng hover cho các dòng */
+.table.table-bordered tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table.table-bordered td {
+  text-align: center;     /* Căn giữa nội dung */
+
+}

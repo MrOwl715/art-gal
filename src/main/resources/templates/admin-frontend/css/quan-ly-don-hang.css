@@ -1,0 +1,63 @@
+/* Tùy chỉnh bảng DataTables */
+/* 1. Tiêu đề cột (th) màu xanh */
+table.dataTable thead th {
+  color: #4e73df !important;  /* Màu xanh */
+  background-color: #f8f9fc;   /* Màu nền nhạt (SB Admin 2) */
+  font-weight: 600;           /* In đậm vừa phải */
+  text-align: center;         /* Căn giữa, tùy chọn */
+}
+
+/* 2. Hover hiệu ứng cho hàng trong tbody */
+table.dataTable tbody tr:hover {
+  background-color: #e8f1ff;   /* Màu xanh nhạt khi hover */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển mượt */
+}
+
+/* 3. Tùy chỉnh căn giữa nội dung */
+table.dataTable td {
+  text-align: center;          /* Căn giữa nội dung */
+  vertical-align: middle;      /* Giữa theo chiều dọc */
+}
+
+/* 4. Tăng khoảng cách ô nếu muốn */
+table.dataTable th, 
+table.dataTable td {
+  padding: 12px 15px;          /* Thêm đệm cho ô */
+}
+
+/* 1. Bao quanh toàn bộ ô tìm kiếm */
+.search-bar {
+    max-width: 60%;    /* Thay vì inline style="max-width: 500px;" */
+    display: flex;       /* Để canh giữa label, select, input, button theo 1 hàng */
+    align-items: center; /* Thay vì inline style="align-items: center;" */
+    margin-bottom: 1rem; /* Tương đương mb-3, bạn có thể bỏ if needed */
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  /* 2. Label dòng chữ "Tìm kiếm đơn hàng theo:" */
+  .search-bar .search-label {
+    margin-right: 0.5rem; /* Thay thế "mr-2" bootstrap */
+    font-weight: 600;     /* Chữ đậm vừa phải */
+    white-space: nowrap;  /* Giữ label trên 1 dòng */
+    margin-top: 2px;
+  }
+  
+  /* 3. Dropdown chọn cột (option) */
+  .search-bar .column-select {
+    max-width: 150px;     /* Thay vì style="max-width: 150px;" */
+    margin-right: 0.5rem; /* Thêm chút khoảng cách với input */
+
+  }
+  
+  /* 4. Input ô tìm kiếm */
+  .search-bar .form-control {
+    flex: 1;              /* Giúp input giãn ra chiếm khoảng trống */
+    margin-right: 0.5rem; /* Khoảng cách với nút */
+  }
+  
+  /* 5. Nút Tìm (nếu muốn tùy chỉnh thêm) */
+  .search-bar .btn-primary {
+    /* Mặc định bootstrap. Thêm custom nếu muốn. */
+  }
+

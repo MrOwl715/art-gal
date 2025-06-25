@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Quản lý tài khoản</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <!-- SB Admin 2 CSS -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <!-- CSS của trang custom-accounts -->
+  <link href="css/custom-accounts.css" rel="stylesheet">
+  <!-- DataTables CSS -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+</head>
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">QUANG ADMIN <sup>123</sup></div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <div class="sidebar-heading">Tài khoản</div>
+
+      <!-- Quản lý tài khoản -->
+      <li class="nav-item active">
+        <a class="nav-link" href="custom-accounts.html">
+          <i class="fas fa-user"></i>
+          <span>Quản lý tài khoản</span>
+        </a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <div class="sidebar-heading">Sản phẩm</div>
+
+      <!-- Quản lý sản phẩm -->
+      <li class="nav-item">
+        <a class="nav-link" href="custom-products.html">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Quản lý sản phẩm</span>
+        </a>
+      </li>
+
+      <!-- Quản lý danh mục -->
+      <li class="nav-item">
+        <a class="nav-link" href="custom-category.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Quản lý danh mục</span>
+        </a>
+      </li>
+
+      <!-- Quản lý đơn hàng -->
+      <li class="nav-item">
+        <a class="nav-link" href="quan-ly-don-hang.html">
+          <i class="fas fa-box"></i>
+          <span>Quản lý đơn hàng</span>
+        </a>
+      </li>
+
+      <!-- Quản lý giao hàng (nếu cần) -->
+
+      <!-- Quản lý khách hàng -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomers" aria-expanded="true" aria-controls="collapseCustomers">
+          <i class="fas fa-users"></i>
+          <span>Quản lý khách hàng</span>
+        </a>
+        <div id="collapseCustomers" class="collapse" aria-labelledby="headingCustomers" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Khách hàng</h6>
+            <a class="collapse-item" href="#">Hỗ trợ khách hàng</a>
+            <a class="collapse-item" href="custom-rating.html">Xem đánh giá sản phẩm</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="custom-profile.html">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Thông tin
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Đăng xuất
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Quản Lý Tài Khoản</h1>
+          </div>
+
+          <!-- Thẻ box Quản lý nhân viên -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex justify-content-between align-items-center">
+              <h6 class="m-0 font-weight-bold text-primary">Quản lý nhân viên</h6>
+              <!-- <button class="btn btn-sm btn-primary" id="addEmployeeBtn">Thêm Nhân Viên</button> -->
+              <a href="add-employee.html" class="btn btn-sm btn-primary">Thêm Nhân Viên</a>
+
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="employeeTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>STT</th>
+                      <th>Tên nhân viên</th>
+                      <th>Email</th>
+                      <th>Chức vụ</th>
+                      <th>Trạng thái</th>
+                      <th>Hành động</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Ví dụ dữ liệu tạm -->
+                    <tr>
+                      <td>1</td>
+                      <td>Nguyễn Văn A</td>
+                      <td>vana@example.com</td>
+                      <td>Nhân viên</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td>
+                        <!-- <button class="btn btn-sm btn-info edit-employee">Sửa thông tin</button> -->
+                        <a href="edit-employee.html"><button class="btn btn-sm btn-info edit-employee">Sửa thông tin</button></a>
+                      </td>
+                    </tr>
+                    <!-- Các dòng dữ liệu khác -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Thẻ box Quản lý tài khoản khách hàng -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Quản lý tài khoản khách hàng</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="customerTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>STT</th>
+                      <th>Tên khách hàng</th>
+                      <th>Email</th>
+                      <th>Trạng thái</th>
+                      <th>Hành động</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Ví dụ dữ liệu tạm -->
+                    <tr>
+                      <td>1</td>
+                      <td>Trần Thị B</td>
+                      <td>thib@example.com</td>
+                      <td><span class="badge badge-success">Hoạt động</span></td>
+                      <td>
+                        <!-- <button class="btn btn-sm btn-info edit-customer" data-customer-id="1">Sửa thông tin</button> -->
+                        <a href="edit-customer.html"><button class="btn btn-sm btn-info edit-customer">Sửa thông tin</button></a>
+                      </td>
+                    </tr>
+                    <!-- Các dòng dữ liệu khác -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Modal Popup: Sửa Thông Tin Tài Khoản Khách Hàng -->
+      <div class="modal fade" id="editCustomerModal" tabindex="-1" role="dialog" aria-labelledby="editCustomerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <form id="editCustomerForm">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editCustomerModalLabel">Sửa Thông Tin Tài Khoản Khách Hàng</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <!-- Trạng thái -->
+                <div class="form-group">
+                  <label for="customerStatus">Trạng thái</label>
+                  <select class="form-control" id="customerStatus" name="customerStatus">
+                    <option value="active">Hoạt động</option>
+                    <option value="inactive">Dừng hoạt động</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Popup: Sửa/Thêm Thông Tin Nhân Viên -->
+      <div class="modal fade" id="editEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="editEmployeeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <form id="editEmployeeForm">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editEmployeeModalLabel">Sửa Thông Tin Nhân Viên</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <!-- Họ và tên -->
+                <div class="form-group">
+                  <label for="employeeLastName">Họ và tên nhân viên</label>
+                  <input type="text" class="form-control" id="employeeLastName" name="employeeLastName" placeholder="Nhập họ và tên">
+                </div>
+                <!-- Tài khoản -->
+                <div class="form-group">
+                  <label for="employeeAccount">Email nhân viên</label>
+                  <input type="email" class="form-control" id="employeeAccount" name="employeeAccount" placeholder="Nhập email">
+                </div>
+                <!-- Mật khẩu -->
+                <div class="form-group">
+                  <label for="employeePassword">Mật khẩu</label>
+                  <input type="password" class="form-control" id="employeePassword" name="employeePassword" placeholder="Nhập mật khẩu">
+                </div>
+                <!-- Nhập lại mật khẩu -->
+                <div class="form-group">
+                  <label for="employeeRepeatPassword">Nhập lại mật khẩu</label>
+                  <input type="password" class="form-control" id="employeeRepeatPassword" name="employeeRepeatPassword" placeholder="Nhập lại mật khẩu">
+                </div>
+                <!-- Số điện thoại -->
+                <div class="form-group">
+                  <label for="phoneNumber">Số điện thoại</label>
+                  <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Nhập số điện thoại">
+                </div>
+                <!-- Ngày sinh -->
+                <div class="form-group">
+                  <label for="birthday">Ngày sinh</label>
+                  <input type="date" class="form-control" id="birthday" name="birthday">
+                </div>
+                <!-- Trạng thái -->
+                <div class="form-group">
+                  <label for="employeeStatus">Trạng thái</label>
+                  <select class="form-control" id="employeeStatus" name="employeeStatus">
+                    <option value="active">Hoạt động</option>
+                    <option value="inactive">Dừng hoạt động</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer: include file footer chung nếu có -->
+      <!-- <?php include 'footer.php'; ?> -->
+    </div>
+    <!-- End of Content Wrapper -->
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Xác nhận đăng xuất ?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Nhấn vào nút "Đăng xuất" nếu bạn muốn kết thúc phiên đăng nhập này.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Huỷ</button>
+          <a class="btn btn-primary" href="login.html">Đăng xuất</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Các file JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- DataTables JS -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="js/sb-admin-2.min.js"></script>
+  <!-- File JS custom (nếu có) -->
+  <script src="js/custom-accounts.js"></script>
+
+  <!-- Khởi tạo DataTables cho các bảng -->
+  <script>
+    $(document).ready(function() {
+      $('#employeeTable').DataTable({
+        language: {
+          search: "Tìm kiếm:",
+          lengthMenu: "Hiển thị _MENU_ nhân viên",
+          info: "Trang _PAGE_ trên tổng số _PAGES_",
+          infoEmpty: "Không có dữ liệu",
+          infoFiltered: "(lọc từ _MAX_ tổng số)"
+        }
+      });
+      $('#customerTable').DataTable({
+        language: {
+          search: "Tìm kiếm:",
+          lengthMenu: "Hiển thị _MENU_ khách hàng",
+          info: "Trang _PAGE_ trên tổng số _PAGES_",
+          infoEmpty: "Không có dữ liệu",
+          infoFiltered: "(lọc từ _MAX_ tổng số)"
+        }
+      });
+    });
+  </script>
+</body>
+</html>

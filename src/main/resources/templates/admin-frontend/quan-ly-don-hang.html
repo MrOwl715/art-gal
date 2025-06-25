@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Quản lý đơn hàng</title>
+  <!-- Custom fonts for this template-->
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <!-- SB Admin 2 CSS -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <!-- Custom CSS (tương tự custom-accounts.css) -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/quan-ly-don-hang.css">
+  <link rel="stylesheet" href="https://fontawesome.com/icons/list?f=classic&s=solid">
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon rotate-n-15">
+                <i class="fas fa-laugh-wink"></i>
+            </div>
+            <div class="sidebar-brand-text mx-3">QUANG ADMIN <sup>123</sup></div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <div class="sidebar-heading">
+            Tài khoản
+        </div>
+
+            <!-- Quản lý tài khoản -->
+            <li class="nav-item">
+                <a class="nav-link" href="custom-accounts.html">
+                <i class="fas fa-user"></i>
+                <span>Quản lý tài khoản</span>
+                </a>
+            </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <div class="sidebar-heading">
+            Sản phẩm
+        </div>
+
+        <!-- Quản lý sản phẩm -->
+            <li class="nav-item">
+                <a class="nav-link" href="custom-products.html">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>Quản lý sản phẩm</span>
+                </a>
+            </li>
+        <!-- Quản lý danh mục -->
+        <li class="nav-item">
+            <a class="nav-link" href="custom-category.html">
+                <i class="fas fa-fw fa-table"></i>
+            <span>Quản lý danh mục</span>
+            </a>
+        </li>
+
+        <!-- Quản lý đơn hàng -->
+            <li class="nav-item active">
+                <a class="nav-link" href="quan-ly-don-hang.html">
+                <i class="fas fa-box"></i>
+                <span>Quản lý đơn hàng</span>
+                </a>
+            </li>
+
+        <!-- Quản lý giao hàng -->
+<!--        <li class="nav-item">
+            <a class="nav-link" href="#">
+            <i class="fas fa-truck"></i>
+            <span>Quản lý giao hàng</span>
+            </a>
+        </li> -->
+
+        <!-- Quản lý khách hàng -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCustomers" aria-expanded="true" aria-controls="collapseCustomers">
+            <i class="fas fa-users"></i>
+            <span>Quản lý khách hàng</span>
+            </a>
+            <div id="collapseCustomers" class="collapse" aria-labelledby="headingCustomers" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Khách hàng</h6>
+                <a class="collapse-item" href="#">Hỗ trợ khách hàng</a>
+                <a class="collapse-item" href="custom-rating.html">Xem đánh giá sản phẩm</a>
+            </div>
+            </div>
+        </li>
+
+
+    </ul>
+    <!-- End of Sidebar -->
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+  <!-- Main Content -->
+  <div id="content">
+
+      <!-- Topbar -->
+      <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                  <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                      <img class="img-profile rounded-circle"
+                          src="img/undraw_profile.svg">
+                  </a>
+                  <!-- Dropdown - User Information -->
+                  <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                      aria-labelledby="userDropdown">
+                      <a class="dropdown-item" href="custom-profile.html">
+                          <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                          Thông tin
+                      </a>
+<!--                                        <a class="dropdown-item" href="#">
+                          <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                          Cài đặt
+                      </a> -->
+                     <!--                                         <a class="dropdown-item" href="#">
+                          <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                          Lịch sử hoạt động
+                      </a> -->
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                          <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                          Đăng xuất
+                      </a>
+                  </div>
+              </li>
+
+          </ul>
+
+      </nav>
+      <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          
+          <!-- Phần Quản Lý Đơn Hàng -->
+          <section id="orderManagement" class="mb-5">
+            <h2 class="h4 mb-3">Quản Lý Đơn Hàng</h2>
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Danh Sách Đơn Hàng</h6>
+              </div>
+              <!-- Ô tìm kiếm tùy chọn cho bảng Đơn Hàng -->
+              <div class="input-group mb-3 search-bar">
+                <label for="orderSearchColumn" class="search-label"><i class="fas fa-search"></i>    Tìm kiếm đơn hàng theo:</label>
+                
+                <select id="orderSearchColumn" class="custom-select column-select">
+                  <option value="0">Mã Đơn Hàng</option>
+                  <option value="1">Ngày Tạo</option>
+                  <option value="5">Số Điện Thoại</option>
+                  <option value="3">Trạng Thái</option>
+                </select>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  id="orderSearchInput" 
+                  placeholder="Nhập từ khóa..."
+                />
+                    <!-- Dropdown trạng thái (ẩn ban đầu) -->
+                    <select id="orderStatusSelect" class="form-control" style="display: none;">
+                    <option value="">-- Tất cả --</option>
+                    <option value="Chờ xử lý">Chờ xử lý</option>
+                    <option value="Xác nhận">Xác nhận</option>
+                    <option value="Chờ lấy hàng">Chờ lấy hàng</option>
+                    <option value="Đang giao hàng">Đang giao hàng</option>
+                    <option value="Đã giao">Đã giao</option>
+                    <option value="Đã huỷ">Đã huỷ</option>
+                    </select>
+  
+                
+              
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button" id="orderSearchBtn">Tìm</button>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="orderManagementTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                          <th>Mã Đơn Hàng</th>
+                          <th>Ngày Tạo</th>
+                          <th>Tổng Tiền</th>
+                          <th>Trạng Thái</th>
+                          <th>Địa Chỉ</th>
+                          <th>Số Điện Thoại</th>
+                          <th>Phương Thức Thanh Toán</th>
+                          <!-- Thêm cột thao tác -->
+                          <th>Thao tác</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Ví dụ một dòng đơn hàng -->
+                        <tr>
+                          <td>DH001</td>
+                          <td>2023-03-15</td>
+                          <td>1,500,000 VND</td>
+                          <td>Đã giao</td>
+                          <td>123 Đường ABC, Quận 1</td>
+                          <td>0901234567</td>
+                          <td>COD</td>
+                          <!-- Nút chỉnh sửa -->
+                          <td>
+                            <!-- <button class="btn btn-primary btnEditOrder" data-order-id="DH001" data-order-status="Đã giao">
+                              Chỉnh sửa
+                            </button> -->
+                            <a href="edit-order.html"><button class="btn btn-primary btnEditOrder" data-order-id="DH001" data-order-status="Đã giao">
+                              Chỉnh sửa
+                            </button></a>
+                          </td>
+                        </tr>
+                        <!-- Thêm các dòng khác tương tự -->
+                      </tbody>
+                      
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Phần Chi Tiết Đơn Hàng -->
+          <section id="orderDetails" class="mb-5">
+            <h2 class="h4 mb-3">Chi Tiết Đơn Hàng</h2>
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Chi Tiết Sản Phẩm Trong Đơn Hàng</h6>
+              </div>
+              <!-- Ô tìm kiếm tùy chọn cho bảng Chi Tiết Đơn Hàng -->
+              <div class="input-group mb-3 search-bar">
+                <label for="detailsSearchColumn" class="search-label"><i class="fas fa-search"></i>    Tìm kiếm đơn hàng theo:</label>
+                
+                <select id="detailsSearchColumn" class="custom-select column-select">
+                  <option value="0">Mã Đơn Hàng</option>
+                  <option value="1">Mã Sản Phẩm</option>
+                </select>
+              
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  id="detailsSearchInput" 
+                  placeholder="Nhập từ khóa..."
+                />
+              
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button" id="detailsSearchBtn">Tìm</button>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="orderDetailsTable" width="100%" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>Mã Đơn Hàng</th>
+                        <th>Mã Sản Phẩm</th>
+                        <th>Số Lượng Sản Phẩm</th>
+                        <th>Đơn Giá</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Ví dụ dòng dữ liệu -->
+                      <tr>
+                        <td>DH001</td>
+                        <td>SP001</td>
+                        <td>2</td>
+                        <td>750,000 VND</td>
+                      </tr>
+                      <!-- Thêm dòng dữ liệu khác nếu cần -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- /.container-fluid -->
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2025</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+    </div>
+    <!-- End of Content Wrapper -->
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Xác nhận đăng xuất ?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="modal-body">Nhấn vào nút "Đăng xuất" nếu bạn muốn kết thúc phiên đăng nhập này.</div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Huỷ</button>
+            <a class="btn btn-primary" href="login.html">Đăng xuất</a>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Modal Chỉnh Sửa Đơn Hàng -->
+<div class="modal fade" id="editOrderModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- Tiêu đề modal -->
+        <div class="modal-header">
+          <h5 class="modal-title">Chỉnh sửa đơn hàng</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Nội dung modal -->
+        <div class="modal-body">
+          <!-- Hiển thị mã đơn hàng (read-only) -->
+          <div class="form-group">
+            <label for="editOrderId">Mã đơn hàng</label>
+            <input type="text" class="form-control" id="editOrderId" readonly>
+          </div>
+          <!-- Chọn trạng thái -->
+          <div class="form-group">
+            <label for="editOrderStatus">Trạng thái</label>
+            <select class="form-control" id="editOrderStatus">
+              <option value="Chờ xử lý">Chờ xử lý</option>
+              <option value="Xác nhận">Xác nhận</option>
+              <option value="Chờ lấy hàng">Chờ lấy hàng</option>
+              <option value="Đang giao hàng">Đang giao hàng</option>
+              <option value="Đã giao">Đã giao</option>
+            </select>
+          </div>
+          <!-- Nút Hủy đơn hàng -->
+          <button id="btnCancelOrder" class="btn btn-danger mb-3">
+            Hủy đơn hàng
+          </button>
+          <!-- Thông báo (nếu cần) -->
+          <div id="editOrderMsg" class="alert alert-success d-none"></div>
+        </div>
+        <!-- Footer modal -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+          <button type="button" class="btn btn-primary" id="btnSaveOrder">Lưu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <!-- Page level custom scripts -->
+  <script src="js/quan-ly-don-hang.js"></script>
+  <script>
+    $(document).ready(function() {
+  // 1. Khi bấm nút "Chỉnh sửa" trên mỗi dòng
+  $("#orderManagementTable").on("click", ".btnEditOrder", function() {
+    // Lấy thông tin từ data-attribute
+    var orderId = $(this).data("order-id");
+    var currentStatus = $(this).data("order-status");
+
+    // Gán vào các trường trong modal
+    $("#editOrderId").val(orderId);
+    $("#editOrderStatus").val(currentStatus);
+
+    // Ẩn thông báo cũ (nếu có)
+    $("#editOrderMsg").addClass("d-none").text("");
+
+    // Hiển thị modal
+    $("#editOrderModal").modal("show");
+  });
+
+  // 2. Nút "Hủy đơn hàng" -> set trạng thái = "Đã hủy"
+  $("#btnCancelOrder").click(function() {
+    $("#editOrderStatus").val("Đã hủy");
+  });
+
+  // 3. Nút "Lưu" -> gửi cập nhật
+  $("#btnSaveOrder").click(function() {
+    var orderId = $("#editOrderId").val();
+    var newStatus = $("#editOrderStatus").val();
+
+    // Ví dụ: Gửi AJAX lên server để cập nhật trạng thái
+    // Ở đây minh họa console.log
+    console.log("Cập nhật đơn hàng", orderId, "thành trạng thái:", newStatus);
+
+    // Sau khi cập nhật thành công trên server, có thể:
+    // - Cập nhật luôn trên giao diện bảng
+    // - Đóng modal / hiện thông báo
+    // Ví dụ cập nhật tạm thời (chỉnh HTML):
+    var row = $("#orderManagementTable").find("[data-order-id='" + orderId + "']").closest("tr");
+    row.find("td:nth-child(4)").text(newStatus); // cột thứ 4 là trạng thái
+    // Cập nhật data-order-status
+    row.find(".btnEditOrder").data("order-status", newStatus);
+
+    // Thông báo thành công
+    $("#editOrderMsg").removeClass("d-none").text("Đã cập nhật trạng thái thành " + newStatus + " thành công!");
+
+    // Tùy ý: Đóng modal sau 1s
+    setTimeout(function(){
+      $("#editOrderModal").modal("hide");
+    }, 1000);
+  });
+});
+
+  </script>
+</body>
+
+</html>
